@@ -12,8 +12,6 @@ Build a standalone exe to the dist folder:
 
 ## Usage
 
-#### Standalone usage:
-
 Open the exe and you will be prompted for which folder containing .csv files to watch, and which folder to output the converted files to (optional), or simply drag the desired folder to watch directly onto the exe
 
 App will initially convert all .csv files it sees in that directory. Subsequent changes to those files will automatically be converted
