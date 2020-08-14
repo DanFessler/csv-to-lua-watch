@@ -15,11 +15,21 @@ if (process.argv.length < 3) {
     ],
     function(err, result) {
       if (err) return console.log(err);
-      start(result.input, result.output || result.input);
+      start(
+        stripQuotes(result.input),
+        stripQuotes(result.output) || stripQuotes(result.input)
+      );
     }
   );
 } else {
-  start(process.argv[2], process.argv[3] || process.argv[2]);
+  start(
+    stripQuotes(process.argv[2]),
+    stripQuotes(process.argv[3]) || stripQuotes(process.argv[2])
+  );
+}
+
+function stripQuotes(input) {
+  return input.replace(/['"]+/g, "");
 }
 
 function start(watchDir, outputDir) {
@@ -36,7 +46,9 @@ function start(watchDir, outputDir) {
 
   // Continue to watch for changes
   fs.watch(watchDir, function(eventType, filename) {
-    convertAndSave(filename, watchDir, outputDir);
+    setTimeout(function() {
+      convertAndSave(filename, watchDir, outputDir);
+    }, 1000);
   });
 }
 
