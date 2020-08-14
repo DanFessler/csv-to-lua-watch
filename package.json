@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg index.js --targets win --output build/csv-to-lua-watch.exe"
+    "build": "pkg index.js --targets win --output dist/csv-to-lua-watch.exe"
   },
   "author": "Dan Fessler",
   "license": "ISC",
   "dependencies": {
     "lua-json": "^1.0.0",
-    "papaparse": "^5.2.0"
+    "papaparse": "^5.2.0",
+    "prompt": "^1.0.0"
   }
 }
