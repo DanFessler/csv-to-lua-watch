@@ -19,11 +19,11 @@ App will initially convert all .csv files it sees in that directory. Subsequent 
 #### Using standalone from command line:
 
 ```sh
-> csv-to-lua-watch path-to-cvs-directory [path-to-output-directory]
+> csv-to-lua-watch path-to-csv-directory [path-to-output-directory]
 ```
 
 #### Node usage:
 
 ```sh
-> node index.js path-to-cvs-directory [path-to-output-directory]
+> node index.js path-to-csv-directory [path-to-output-directory]
 ```
