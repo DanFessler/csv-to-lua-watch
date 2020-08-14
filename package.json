@@ -13,5 +13,8 @@
     "lua-json": "^1.0.0",
     "papaparse": "^5.2.0",
     "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9"
   }
 }
